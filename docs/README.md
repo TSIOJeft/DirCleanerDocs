@@ -1,6 +1,7 @@
 ---
 home: true
 heroImage: /logo.png
+
 actions:
   - text: 快速开始
     link: /guide/GUIDE
@@ -8,6 +9,9 @@ actions:
   - text: 立即下载
     link: /guide/GUIDE.md#官方下载地址
     type: secondary
+editLink: true
+lastUpdated: true
+contributors: true
 features:
 - title: 简洁至上
   details: 以MD3 为基本设计并插入远方的理解为您提供简洁高效的界面

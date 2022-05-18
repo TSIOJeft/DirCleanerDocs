@@ -15,6 +15,10 @@ module.exports = {
   },
   theme: defaultTheme({
       sidebarDepth: 3,
+      docsRepo: 'https://github.com/TSIOJeft/DirCleanerDocs',
+      docsBranch: 'branch',
+      docsDir: 'docs',
+      editLinkPattern: ':repo/edit/:branch/:path',
       navbar: [
       {
         text: '开始',
