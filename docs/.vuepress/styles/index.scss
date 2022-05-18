@@ -1,0 +1,19 @@
+:root {
+  // brand colors
+  --c-brand: #2196f3;
+  --c-brand-light: #2196f3;
+  --c-details-bg: #2196f3;
+  --c-text-quote: #546E7A;
+  --c-bg-light: #ECEFF1;
+  // font vars
+  --font-family: Roboto,'Noto Sans SC',sans-serif;
+  }
+  html.dark {
+  // brand colors
+  --c-brand: #2196f3;
+  --c-brand-light: #2196f3;
+  --c-details-bg: #2196f3;
+  --c-text-quote: #546E7A;
+  // font vars
+  --font-family: Roboto, sans-serif;
+  }
