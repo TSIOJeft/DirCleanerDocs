@@ -113,10 +113,14 @@ OPPO VIVO 三星 等应用商店
 [视频教程如何激活](https://www.bilibili.com/video/BV1Df4y157Bw)
 [ADB 工具下载](https://adbshell.com/downloads)
 使用 adb 连接到你的手机，并使用以下命令激活清浊
-> adb shell dpm set-device-owner com.farplace.qingzhuo/.receiver.AdminReceiver
+```ts
+adb shell dpm set-device-owner com.farplace.qingzhuo/.receiver.AdminReceiver
+```
 
-:::wairning
-常见already set device owner 错误 
+:::warning
+
+常见 already set device owner 错误 
+
 :::
 
 因为已经设置了管理员，在系统设置内可以查看到 其他错误可以百度
@@ -127,7 +131,10 @@ OPPO VIVO 三星 等应用商店
 
 文件转移可以帮助你把文件从源文件夹转移到目标文件夹 输入他们的路径就行了💛 也可以使用正则匹配这些文件 
 高级用户可以使用云端的文件转移规则😀
-> 通知栏可以添加磁贴快速文件转移
+
+:::tip
+通知栏可以添加磁贴快速文件转移
+:::
 
 ### 应用编译优化
 * 可加快应用速度优化续航
@@ -144,7 +151,9 @@ OPPO VIVO 三星 等应用商店
 
 ` 长按这三个按钮都能起到全部应用都作用的效果 `
 
-> 尽量不要编译系统应用避免出现问题
+:::warning
+尽量不要编译系统应用避免出现问题
+:::
 
 `推荐speed-profile 编译`
 
@@ -158,7 +167,9 @@ OPPO VIVO 三星 等应用商店
 ### 甜蜜小猫
 一个帮你吃掉累计清理垃圾的东西 随机的小猫ID 对应不同种小猫
 
-> 80MB/H 50碎片/H 增加 5g 重量
+:::tip
+80MB/H 50碎片/H 增加 5g 重量
+:::
 
 希望它会带来 sweet 啊😘
 :::tip
@@ -170,6 +181,7 @@ OPPO VIVO 三星 等应用商店
 :::
 
 ### 工具部件
+
 现在只有运存清理的功能 有一个展示内部存储大小的玩意，和一些工具按钮
 
 
@@ -178,7 +190,9 @@ OPPO VIVO 三星 等应用商店
 ### 自动清理
 根据自己的需要选择间隔时间清理和执行的项目
 
-> 记得开启清浊的自启动权限这样子的话重启手机自动清理才不会失效哦
+:::tip
+记得开启清浊的自启动权限这样子的话重启手机自动清理才不会失效哦
+:::
 
 :::tip
 甜蜜小猫可以保证自动清理一定能执行
