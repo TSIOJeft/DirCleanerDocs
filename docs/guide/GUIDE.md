@@ -16,11 +16,14 @@
 
 OPPO VIVO 三星 等应用商店
 
-### 最新版本 1.8.3_rebuild2
+### 最新版本 1.8.5
+
+
+> 因为部分市场不允许含有 ROOT 功能 所以大家自行选择你想要的版本 不过可以保证的是酷安网页下载的是完整包
 
 ## 更新日志
 
-[更新日志](https://www.coolapk.com/feed/34446927?shareKey=ZTZhOTYzN2Y2NjcxNjIzODg0Mzk~&shareUid=2838135&shareFrom=com.coolapk.market_11.2.2)
+[更新日志](https://www.coolapk.com/feed/37214239?shareKey=YzhiM2VlN2E0ZWIwNjJjMDIxOWQ~&shareUid=2838135&shareFrom=com.coolapk.market_11.2.2)
 
 ## 功能介绍
 
@@ -238,8 +241,11 @@ adb shell dpm set-device-owner com.farplace.qingzhuo/.receiver.AdminReceiver
 
 ## 设置中的功能
 
-## 全局 ROOT
+### 全局 ROOT
 当你开启这个选项后 清浊将扫描规则中的 ` /data/data ` 路径下的文件 并删除 应用清理也会扫描` /data/data` 路径下的文件 如果开启这个选项后有些 app 出现问题请关闭这个选项 并重装这些 app
+
+### 多线程
+下面的滑块可以调节线程数量 当你觉得手机扫描卡顿 或者 扫描途中闪退 可以尝试调小线程数量 具体数值可以因人而异
 
 ### 解锁 Android/data(已经移除)
 针对安卓 R 用户` android/data `路径无法被访问，清浊使用 ROOT 解锁这个文件夹，使其可以被读写。
@@ -247,6 +253,12 @@ adb shell dpm set-device-owner com.farplace.qingzhuo/.receiver.AdminReceiver
 :::warning
 过程不可逆 需要 ROOT 无法恢复到解锁之前的状态 慎重决定
 :::
+
+### 加载缩略图
+文件列表加载视频和图片等缩略图可能导致卡顿 酌情开关
+
+### 删除空文件
+对应的闲杂空文件是否删除空文件 当然`nomedia`文件已经为您排除
 
 ### 多用户模式
 可能有些用户在手机上开了分身 那么打开这个选项即可扫描其他分身的文件 强
@@ -268,9 +280,50 @@ adb shell dpm set-device-owner com.farplace.qingzhuo/.receiver.AdminReceiver
 
 [自定义规则详细教程](https://www.coolapk.com/feed/22164107?shareKey=YjMxZGQ3MWI2MGIyNWY4ZDczOTU~&shareUid=2838135&shareFrom=com.coolapk.market_10.5.3 "自定义规则详细教程")
 
+### 自定义配置
+对应入口 设置 自定义配置
+这个功能用来定义一些可能有效的自定义功能
+目前的参数较少
+支持 闲杂文件的自定义正则 也就是自定义要作为闲杂文件的文件类型
+支持 APK 扫描的自定义正则 同理匹配你想作为apk 文件的文件
+应用清理 自定义扫描作为的路径
+
+:::tip
+注意 路径中多个路径支持请参照格式
+注意 应用清理中的pack 对应为应用包名 在扫描时可以为您自动替换成应用的路径
+:::
+
+以下是代码格式
+
+```ts
+{
+  "AppClean": {
+    "path": [
+      "/storage/emulated/0/Android/data/pack/cache",
+      "/storage/emluated/0//pack/files/cache",
+      "/storage/emulated/0/Android/data/pack/log"
+    ],
+    "exclude": false
+  },
+  "ChaosFile": {
+    "regex": ".*.(log|logs)",
+    "exclude": false
+  },
+  "ApkClean": {
+    "regex": ".*.*(apk|apkm)$",
+    "exclude": false
+  }
+}
+```
+:::warning
+目前可能 apk 文件，闲杂文件仅针对安卓11 以上 android/data 里的文件有效 抱歉时间匆忙 后续完善
+:::
+
 ### 排除项
+此功能暂时有部分问题 可能导致无法排除 请等待更新 抱歉 呜呜呜
 如果你不想删除一些文件或者文件夹可以添加他们到排除项
 点击按钮选择文件夹 ` 或者长按按钮手动输入文件的路径 `
+长按按钮可以选择排除应用 仅对应应用清理有效
 这些排除项对于 ` 常规清理 根目录整理 强迫症清理 ` 都有效
 当然清浊服务器也提供了一些排除项
 
@@ -318,3 +371,12 @@ adb shell dpm set-device-owner com.farplace.qingzhuo/.receiver.AdminReceiver
 > 3群：644471903
 > 4群：940133521
 > 5群：820063480
+> 11群：517333970
+
+## 关于
+:::tip
+很感谢您能使用这款APP 当然虽然大家好评颇多 但我还是觉得APP 差强人意破破烂烂的 哈哈😄 还是想说些话吧 其实压力不小 APP 也是自己一个人写的 平时忙自己的学习 自己的生活 照料开发也是偶尔 希望在自己年轻的年纪还是能不要停留在此前 往高处攀登 时间匆匆忙忙的 照顾各位不是妥善 希望各位海涵
+不过 希望我们能在高处相见
+好事多磨 未来可期
+2022年7月2日
+:::

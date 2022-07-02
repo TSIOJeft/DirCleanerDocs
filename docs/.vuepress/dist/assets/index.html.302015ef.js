@@ -1,1 +1,0 @@
-import{_ as n,r as t,o,c as r,a,b as c,d as s}from"./app.81174602.js";const _={},l={href:"https://beian.miit.gov.cn",target:"_blank",rel:"noopener noreferrer"},i=s("\u8700ICP\u59072022006129\u53F7");function d(f,m){const e=t("ExternalLinkIcon");return o(),r("p",null,[a("a",l,[i,c(e)])])}var x=n(_,[["render",d],["__file","index.html.vue"]]);export{x as default};
