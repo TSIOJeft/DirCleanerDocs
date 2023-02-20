@@ -6,8 +6,6 @@
 
 [酷安](https://www.coolapk.com/apk/com.farplace.qingzhuo) 
 
-[小米](http://app.mi.com/details?id=com.farplace.qingzhuo)
-
 [华为](https://appgallery.huawei.com/app/C104444281)
 
 [魅族](http://app.meizu.com/apps/public/detail?package_name=com.farplace.qingzhuo) 
@@ -16,14 +14,14 @@
 
 OPPO VIVO 三星 等应用商店
 
-### 最新版本 1.8.5
+### 最新版本 1.9.5
 
 
 > 因为部分市场不允许含有 ROOT 功能 所以大家自行选择你想要的版本 不过可以保证的是酷安网页下载的是完整包
 
 ## 更新日志
 
-[更新日志](https://www.coolapk.com/feed/37214239?shareKey=YzhiM2VlN2E0ZWIwNjJjMDIxOWQ~&shareUid=2838135&shareFrom=com.coolapk.market_11.2.2)
+[更新日志](https://www.coolapk.com/feed/43502541?shareKey=Njk1YTUzNzhkNmM4NjNmMmUyYzc~&shareUid=2838135&shareFrom=com.coolapk.market_13.0)
 
 ## 功能介绍
 
@@ -39,7 +37,13 @@ OPPO VIVO 三星 等应用商店
 > 长按界面的圆形按钮全选/反选
 
 > 点击文件打开
+ 
+### 授权访问权限
 
+:::tip
+安卓13(特拉米苏)版本开始您需要单独授权您想要扫描的应用
+在 菜单栏-> 已授权应用
+:::
 
 
 ### 快速清理
@@ -161,6 +165,15 @@ adb shell dpm set-device-owner com.farplace.qingzhuo/.receiver.AdminReceiver
 `推荐speed-profile 编译`
 
 编译完成后 每次重启优化失效 如果编译后出现问题 重启手机即可
+
+### 文件中转
+帮助快速转移文件到系统 Download 文件夹内 
+在任何应用内 打开文件时 
+1.`其他应用打开` `清浊（文件中转）`
+2.`分享` `清浊（文件中转）`
+:::warning
+会删除源文件 当然有些文件没法删除
+:::
 
 ## 桌面小部件
 
@@ -319,6 +332,41 @@ adb shell dpm set-device-owner com.farplace.qingzhuo/.receiver.AdminReceiver
 目前可能 apk 文件，闲杂文件仅针对安卓11 以上 android/data 里的文件有效 抱歉时间匆忙 后续完善
 :::
 
+### 规则工坊
+用来大家分享或者使用其他玩家的规则的玩意
+点击规则会跳转规则编辑界面 需要使用的的话直接保存就行了
+点击加号 可以上传规则到工坊 对应的规则格式在下面
+
+:::tip
+注意 路径中多个路径 用逗号(,)分割
+注意 正则只支持单个
+:::
+
+:::tip
+规则管理界面 新增规则长按保存按钮可以快速导出代码 或者长按导入剪贴板规则 
+可以完成快速分享
+:::
+
+以下是代码格式
+
+```ts
+{
+  "Description": "下载的程序包",
+  "App": true,
+  "Name": "腾讯QQ 小程序包",
+  "Notice": 0,
+  "PackName": "com.tencent.mobileqq",
+  "Paths": [
+    "/storage/emulated/0/android/data/com.tencent.mobileqq/Tencent/wxminiapp",
+    "/storage/emulated/0/android/data/com.tencent.mobileqq/Tencent/wxminiapp"
+  ]
+}
+```
+:::warning
+Notice 有三个值 0 1 2 当notice为2 将不自动勾选
+:::
+
+
 ### 排除项
 此功能暂时有部分问题 可能导致无法排除 请等待更新 抱歉 呜呜呜
 如果你不想删除一些文件或者文件夹可以添加他们到排除项
@@ -349,6 +397,8 @@ adb shell dpm set-device-owner com.farplace.qingzhuo/.receiver.AdminReceiver
 :::warning
 
  如果没有绑定微信账单交易账单号就是激活码 可自行填入然后绑定
+
+ 用激活码激活 要先激活后登录
 
  检查激活码后提示绑定账号 选择自己想要绑定的账号就行了嗷😁
 
